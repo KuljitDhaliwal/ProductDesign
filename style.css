@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Bebas+Neue&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&family=Bruno+Ace+SC&family=Roboto&family=Roboto+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text-color: white;
+}
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--wrapper);
+    transition: .5s ease-in-out all;
+}
+.first-div{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 2rem 2rem;
+}
+.first-div .logo{
+    background-color: transparent;
+    width: 150px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid rgb(178, 173, 173);
+    color: white;
+}
+.logo:before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 45px;
+    border: 2px solid black;
+    border-radius: 50%;
+    transform: rotate(15deg);
+}
+.logo:after{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 45px;
+    border: 2px solid rgb(58, 126, 168);
+    border-radius: 50%;
+    transform: rotate(-10deg);
+}
+.first-div h1{
+    color: var(--text-color);
+    font-size: 6rem;
+    margin-top: 4rem;
+    -webkit-text-stroke: 1px rgba(128, 128, 128, 0.247);
+    font-family: 'Alatsi', sans-serif;
+}
+.first-div p{
+    color: grey;
+    margin-top: 2rem;
+}
+.btn{
+    border: 0;
+    background-color: rgb(56, 52, 52);
+    color: var(--text-color);
+    width: 100px;
+    padding: 10px;
+    border-radius: 10rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.cylinder{
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    background-color: var(--cylinder);
+    filter: brightness(.6);
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+    bottom: 0;
+    box-shadow: inset 0 5px 5px;
+    transition: .5s ease-in-out all;
+}
+.cylinder:after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: var(--cylinder);
+    filter: brightness(.9);
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+    bottom: 0;
+    left: 4rem;
+    box-shadow: inset 0 5px 5px;
+    transition: .5s ease-in-out all;
+}
+.second-div{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.semi-cylinder{
+    width: 90%;
+    height: 95vh;
+    top: 0;
+    background-color: rgb(62, 59, 59);
+    border-bottom-left-radius: 30rem;
+    border-bottom-right-radius: 30rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+ul{
+    list-style: none;
+}
+li{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .5s ease-in all;
+}
+li.show{
+    opacity: 1;
+}
+.heading{
+    top: -20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    z-index: 3;
+    position: absolute;
+    -webkit-text-stroke: 1px rgba(197, 26, 26, 0.315);
+    font-family: 'Alatsi', sans-serif;
+}
+.heading.kiwi{
+    color: #BBC347;
+}
+.heading.pineapple{
+    color: #A2CCAE;
+}
+.heading.strawberry{
+    color: #F46F5D ;
+}
+.can-img{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    height: 25rem;
+    top: 50%;
+    transition: 2s all ease-in-out;
+}
+.can-img.sizeShow{
+    animation: size 1s ease-in-out;
+}
+@keyframes size {
+    0%{
+        height: 35rem;
+        transform: translate(-50%, -50%);
+    }
+    50%, 80%{
+        height: 10rem;
+        transform: translate(-50%, -50%) rotate(-20deg);
+    }
+}
+.fruit-img{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    height: 50rem;
+    top: 50%;
+    transition: 2s all ease-out;
+}
+.fruit-img.fruitTwist{
+    animation: fruitSize 1s ease-in-out;
+}
+@keyframes fruitSize {
+    0%{
+        height: 45rem;
+    }
+    50%, 80%{
+        height: 20rem;
+    }
+}
+.buttons{
+    display: flex;
+    padding: 10px;
+    width: 100px;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 2rem;
+}
+.buttons i{
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px;
+}
