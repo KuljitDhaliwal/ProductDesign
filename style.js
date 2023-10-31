@@ -7,9 +7,6 @@ const slideFruitImg = document.querySelectorAll('.fruit-img');
 const headings = document.querySelectorAll('.heading');
 const wrapper = document.querySelector('.wrapper');
 const cylinder = document.querySelector('.cylinder');
-
-
-
 let i = 1;
 prev.addEventListener('click', () => {
     i -= 1;
@@ -22,7 +19,6 @@ next.addEventListener('click', () => {
 })
 show(i);
 
-
 function show(num) {
 
     if (num == slides.length) {
@@ -33,7 +29,6 @@ function show(num) {
         num = slides.length - 1;
         i = slides.length - 1;
     }
-
     for (let y of slides) {        
         y.classList.remove('show');
     }

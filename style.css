@@ -16,6 +16,7 @@
     justify-content: center;
     background-color: var(--wrapper);
     transition: .5s ease-in-out all;
+    overflow: hidden;
 }
 .first-div{
     width: 50%;
@@ -59,13 +60,13 @@
 .first-div h1{
     color: var(--text-color);
     font-size: 6rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     -webkit-text-stroke: 1px rgba(128, 128, 128, 0.247);
     font-family: 'Alatsi', sans-serif;
 }
 .first-div p{
     color: grey;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .btn{
     border: 0;
@@ -75,7 +76,7 @@
     padding: 10px;
     border-radius: 10rem;
     cursor: pointer;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .cylinder{
     position: absolute;
@@ -210,4 +211,13 @@ li.show{
     padding: 10px;
     border-radius: 50%;
     box-shadow: 0 5px 10px;
+}
+
+@media (max-width: 768px){
+    .first-div{
+        display: none;
+    }
+    .second-div{
+        width: 100%;
+    }
 }
